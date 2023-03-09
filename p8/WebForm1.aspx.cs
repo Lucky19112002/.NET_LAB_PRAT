@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace p8
 {
@@ -15,12 +10,12 @@ namespace p8
             string meals = "";
             for (int i = 0; i < CheckBoxList1.Items.Count; i++)
             {
-                if(CheckBoxList1.Items[i].Selected == true)
+                if (CheckBoxList1.Items[i].Selected == true)
                     meals += CheckBoxList1.Items[i].Value.ToString() + ","; // Get Meals Selected 
             }
             string val = "";
-            val = RadioButtonList1.SelectedValue;
-            String vaciName = DropDownList1.SelectedValue;
+            val = RadioButtonList1.SelectedValue; // Get Vaccination Status
+            String vaciName = DropDownList1.SelectedValue; // Get Vaccination Type
 
             Response.Write("<h1 style='color:green'>Name: " + name + "</h1>");
             Response.Write("<h1 style='color:red'>Meals " + meals + "</h1>");
